@@ -1,0 +1,71 @@
+@import 'tailwindcss';
+
+@plugin "@tailwindcss/typography";
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-medium tracking-tight;
+  }
+}
+
+@utility container {
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 1280px;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --shadow-layer: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+
+  --color-framework: #000;
+  --color-black: #0b0b0b;
+  --color-white: #fff;
+  --color-brand: #f50;
+  --color-blue: #0052ff;
+  --color-yellow: #cdea19;
+  
+  /* Orange theme colors for food store */
+  --color-orange-50: #fff7ed;
+  --color-orange-100: #ffedd5;
+  --color-orange-200: #fed7aa;
+  --color-orange-300: #fdba74;
+  --color-orange-400: #fb923c;
+  --color-orange-500: #f97316;
+  --color-orange-600: #ea580c;
+  --color-orange-700: #c2410c;
+  --color-orange-800: #9a3412;
+  --color-orange-900: #7c2d12;
+  
+  /* Red accent colors */
+  --color-red-50: #fef2f2;
+  --color-red-100: #fee2e2;
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-red-700: #b91c1c;
+  
+  /* Green for success states */
+  --color-green-50: #f0fdf4;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-gray-950: #030712;
+
+  --default-transition-duration: 250ms;
+}
